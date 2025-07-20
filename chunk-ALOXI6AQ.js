@@ -1,0 +1,1 @@
+import{Oa as o,hb as n,ib as m,xb as a}from"./chunk-MOLTIBTM.js";var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-home"]],decls:2,vars:0,template:function(e,p){e&1&&(n(0,"p"),a(1,"Hey user!"),m())},encapsulation:2})};export{i as Home};
