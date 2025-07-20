@@ -24,7 +24,9 @@ jobs:
       - name: Build the project
         run: npm run build:prod
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: dist/angular-practice-v2/browser
+      - name: Deploy to gh pages
+        run: |
+          npx angular-cli-ghpages --dir=dist/angular-cractice-v2
+        env:
+          CI: true
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
