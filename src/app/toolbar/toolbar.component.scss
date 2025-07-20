@@ -1,0 +1,38 @@
+@use '@angular/material' as mat;
+
+.sidenav-container {
+  height: 100%;
+
+  .content {
+    padding: 5rem;
+  }
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
+@mixin theme($theme) {
+  mat-toolbar {
+    background-color: mat.get-theme-color($theme, primary);
+
+    .docs-navbar, .docs-navbar-header {
+      background: mat.get-theme-color($theme, primary-container);
+
+      .docs-navbar-header-item-selected {
+        background: rgba(mat.get-theme-color($theme, primary), 0.1);
+      }
+    }
+  }
+}
